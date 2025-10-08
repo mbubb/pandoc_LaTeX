@@ -1,0 +1,17 @@
+---
+title: "The Neurobiology of Attachment: How Early Caregiving Shapes Emotional Regulation" 
+subtitle: |
+    PSY-260 - Prof. Bridget Anton
+  
+author: | 
+    Michael Bubb
+    
+date: "\\today"
+titlepage: true
+titlepage-rule-height: 2
+header-left: "Neurobiology of Attachment"
+keywords: [attachment, brain development, emotional regulation, infancy]
+bibliography: references.bib
+csl: apa.csl
+csl-refs: true
+---

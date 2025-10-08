@@ -1,0 +1,30 @@
+# ---- Party A ----
+partyA: Northern Garment Corp
+partyAshort: NGC
+partyAaddress: 1 Marineview Plaza Suite 24B, Hoboken, NJ 07030
+partyAcontact: Stuart Friedman
+partyAemail:
+partyAphone: 
+partyAtitle: President
+ 
+# ---- Party B ----
+partyB: Overseas Express Consolidators Canada Inc
+partyBshort: OEC
+partyBaddress: 725 Monte Liesse, Montreal QC H4T 1P5, Canada
+partyBcontact: Denis Fiamegas
+partyBemail: 
+partyBphone: 
+partyBtitle: V.P. Warehousing and Distribution
+
+# ---- Agreement Meta ----
+effectiveDate: October 7, 2025
+sigDate: October 7, 2025
+commissionRate: "5%"
+paymentSchedule: Monthly
+terminationNoticeDays: 30
+governingLaw: New Jersey, USA
+
+# ---- Optional Fields ----
+logoPath: "./logo.png"             # if you want to include in a header later
+agreementTitle: "Commercial Partnership Agreement"
+notes: "For referral of logistics clients in the North American garment industry."

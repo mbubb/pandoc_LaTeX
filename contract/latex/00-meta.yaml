@@ -1,0 +1,12 @@
+# Main document metadata
+title: "Commercial Partnership Agreement"
+author: "Northern Garment Corp & Overseas Express Consolidators (OEC)"
+date: "October 2025"
+geometry: "margin=1in"
+fontsize: 12pt
+mainfont: "Times New Roman"
+linkcolor: blue
+colorlinks: true
+include-in-header: templates/header.tex
+include-before-body:
+  - data/OEC.yaml
