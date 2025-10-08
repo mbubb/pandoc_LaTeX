@@ -1,65 +1,41 @@
 \documentclass[12pt]{article}
 \usepackage{geometry,graphicx,booktabs,enumitem,microtype,hyperref,xcolor}
+\usepackage{fancyhdr,lastpage}
+
 \geometry{margin=1in}
 \setlist[itemize]{leftmargin=1.2em}
 \setlength{\parskip}{0.8em}
 \setlength{\parindent}{0pt}
 \hypersetup{colorlinks=true, allcolors=blue}
 
+% --- Footer setup ---
+\pagestyle{fancy}
+\fancyhf{}
+{\Large\bfseries $if(agreementTitle)$$agreementTitle$$else$$title$$endif$}\\[1em]
+\fancyfoot[R]{Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
 \begin{document}
 
 % ---- Header ----
 \begin{center}
     \vspace*{-1cm}
-    \IfFileExists{$logoPath$}{\includegraphics[width=0.25\textwidth]{$logoPath$}\\[1em]}{}
-    {\Large\bfseries $agreementTitle$}\\[1em]
-    {\normalsize Effective Date: $effectiveDate$}\\[0.5em]
-    {\small $notes$}
+    $if(logoPath)$
+        \includegraphics[width=0.25\textwidth]{$logoPath$}\\[1em]
+    $endif$
+    $if(agreementTitle)$
+        {\Large\bfseries $agreementTitle$}\\[1em]
+    $endif$
+    $if(effectiveDate)$
+        {\normalsize Effective Date: $effectiveDate$}\\[0.5em]
+    $endif$
+    $if(notes)$
+        {\small $notes$}
+    $endif$
 \end{center}
 
----
 
-## Parties
-
-**Party A: $partyA$ ($partyAshort$)**  
-Address: $partyAaddress$  
-Contact: $partyAcontact$ — $partyAtitle$  
-Email: $partyAemail$  
-Phone: $partyAphone$
-
-**Party B: $partyB$ ($partyBshort$)**  
-Address: $partyBaddress$  
-Contact: $partyBcontact$ — $partyBtitle$  
-Email: $partyBemail$  
-Phone: $partyBphone$
-
----
-
-## 1. Purpose & Services
-(Insert your Markdown contract body here — e.g. CommercialPartner_OEC.md content.)
-
----
-
-## 2. Payment Terms
-
-- Commission Rate: **$commissionRate$**
-- Payment Schedule: **$paymentSchedule$**
-- Termination Notice: **$terminationNoticeDays$ days**
-- Governing Law: **$governingLaw$**
-
----
-
-## Signatures
-
-\begin{center}
-\begin{tabular}{p{7cm} p{7cm}}
-\textbf{$partyA$} & \textbf{$partyB$} \\
-\\[-0.5em]
-Name: $partyAcontact$ & Name: $partyBcontact$ \\
-Title: $partyAtitle$ & Title: $partyBtitle$ \\
-Signature: \hrulefill & Signature: \hrulefill \\
-Date: $sigDate$ & Date: $sigDate$ \\
-\end{tabular}
-\end{center}
+$body$
 
 \end{document}
