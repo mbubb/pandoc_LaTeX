@@ -1,6 +1,11 @@
 \documentclass[12pt]{article}
 \usepackage{geometry,graphicx,booktabs,enumitem,microtype,hyperref,xcolor}
 \usepackage{fancyhdr,lastpage}
+\usepackage{longtable,array}
+
+% Pandoc tight list compatibility
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 \geometry{margin=1in}
 \setlist[itemize]{leftmargin=1.2em}
@@ -11,7 +16,7 @@
 % --- Footer setup ---
 \pagestyle{fancy}
 \fancyhf{}
-{\Large\bfseries $if(agreementTitle)$$agreementTitle$$else$$title$$endif$}\\[1em]
+\fancyfoot[L]{\textit{$if(shortTitle)$$shortTitle$$else$$agreementTitle$$endif$}}
 \fancyfoot[R]{Page \thepage\ of \pageref{LastPage}}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0.4pt}
@@ -34,7 +39,6 @@
         {\small $notes$}
     $endif$
 \end{center}
-
 
 $body$
 

@@ -1,0 +1,132 @@
+\documentclass[12pt]{article}
+\usepackage{geometry,graphicx,booktabs,enumitem,microtype,hyperref,xcolor,longtable,array,tabularx}
+\usepackage{fancyhdr,lastpage}
+\geometry{margin=1in}
+\setlist[itemize]{leftmargin=1.2em}
+\setlength{\parskip}{0.8em}
+\setlength{\parindent}{0pt}
+\hypersetup{colorlinks=true, allcolors=blue}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\input{\datafile}
+
+% ---------------------------
+% Page styles
+% ---------------------------
+
+% Header/footer for the FIRST PAGE
+\fancypagestyle{firstpage}{
+  \fancyhf{}
+  \fancyfoot[R]{Page \thepage\ of \pageref{LastPage}}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0.4pt}
+}
+
+% Header/footer for SUBSEQUENT PAGES
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\agreementShortTitle}  
+\fancyfoot[R]{Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% ---------------------------
+\begin{document}
+
+% Use the first-page style
+\thispagestyle{firstpage}
+
+% ---- Header (first page only) ----
+\begin{center}
+% \includegraphics[width=0.4\textwidth]{logo.png}
+{\Large\textbf{\partyA}\\
+\partyAaddress}\\[2em]
+\end{center}
+
+\begin{center}
+  {\Large\bfseries \agreementTitle}\\[0.5em]
+\end{center}
+
+% Define the running header for subsequent pages
+\markboth{\agreementShortTitle}{\agreementShortTitle}
+
+% =========================================================
+% ===============   AGREEMENT BODY   =======================
+% =========================================================
+
+\section{Agreement Overview}
+This Operating Partnership Agreement ("Agreement") is entered into by and between:
+
+\subsection*{Party A}
+\textbf{\partyA (aka: \partyAshort)}\\
+Address: \textbf{\partyAaddress}
+
+\subsection*{Party B}
+\textbf{\partyB (aka: \partyBshort)}\\
+Address: \textbf{\partyBaddress}
+
+Effective Date: \textbf{\effectiveDate}
+
+\newpage
+
+\section{Purpose \& Services}
+\subsection{Referrals}
+\partyAshort{} agrees to refer potential clients ("Prospects") to \partyBshort{}.  
+If \partyBshort{} successfully sells services to referred Prospects, \partyAshort{} will receive a commission as outlined in Section~\ref{sec:commissions}.
+
+\subsection{Cooperation}
+Both parties agree to cooperate and assist during the sales process.  
+\partyBshort{} will provide all relevant materials to \partyAshort{} for services they promote.
+
+% ---------------------------------------------------------
+\section{Commissions}
+\label{sec:commissions}
+
+\subsection{Referral Commission}
+\partyBshort{} agrees to pay \partyAshort{} a commission of \commissionRate{} of total distribution or service fees received from services rendered (e.g., trucking, storage, special services) to clients referred by \partyAshort{}.
+
+\subsection{Payment Schedule}
+This commission will remain in effect for the duration of the client’s relationship with \textbf{\partyBshort}, beginning from the date the client makes their first payment on a billable service invoice.
+
+% ---------------------------------------------------------
+\section{Ongoing Client Engagement and Support}
+\partyAshort{} will continue, as required, to engage and support clients after onboarding. This may include:
+\begin{itemize}
+  \item Regular check-ins to ensure satisfaction with \partyBshort{}’s services.
+  \item Acting as a liaison between the client and \partyBshort{} to address issues or feedback.
+  \item Providing insights on client needs and potential areas for service improvement.
+  \item Assisting with additional support or maximizing client experience.
+  \item Attending review sessions if necessary.
+\end{itemize}
+
+% ---------------------------------------------------------
+\section{Independent Contractor Status}
+\begin{itemize}
+  \item Both parties are independent contractors.
+  \item Neither party is entitled to the other’s employee benefits.
+  \item Each party shall comply with applicable laws and pay their own taxes and benefits.
+\end{itemize}
+
+% ---------------------------------------------------------
+\section{Confidentiality}
+Both parties agree to keep confidential all information received from the other party in the course of this Agreement.
+
+% ---------------------------------------------------------
+\section{Signatures}
+\renewcommand{\arraystretch}{1.5}
+
+\noindent
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textbf{\partyAshort} & \textbf{\partyBshort} \\
+\hline
+Name: \partyAcontact & Name: \partyBcontact \\
+Title: \partyAtitle & Title: \partyBtitle \\[2em]
+Signature: \underline{\hspace{5cm}} & Signature: \underline{\hspace{5cm}} \\
+Date:  \underline{\hspace{5cm}} & Date:  \underline{\hspace{5cm}} \\
+\hline
+\end{tabularx}
+
+\vspace{1em}
+
+\end{document}

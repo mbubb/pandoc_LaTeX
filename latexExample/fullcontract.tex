@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+\usepackage{geometry,graphicx,booktabs,enumitem,microtype,hyperref,xcolor,longtable,array}
+\usepackage{fancyhdr,lastpage}
+\geometry{margin=1in}
+\setlist[itemize]{leftmargin=1.2em}
+\setlength{\parskip}{0.8em}
+\setlength{\parindent}{0pt}
+\hypersetup{colorlinks=true, allcolors=blue}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% --- Load parameter definitions ---
+\input{data.tex}
+
+% --- Footer setup ---
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+
+% ---- Header ----
+\begin{center}
+  \vspace*{-1cm}
+  {\Large\bfseries \agreementTitle}\\[1em]
+\end{center}
+
+% =========================================================
+% ===============   AGREEMENT BODY   =======================
+% =========================================================
+
+\section{Agreement Overview}
+This Operating Partnership Agreement ("Agreement") is entered into by and between:
+
+\subsection*{Party A}
+\textbf{\partyA}\\
+Address: \textbf{\partyAaddress}
+
+\subsection*{Party B}
+\textbf{\partyB}\\
+Address: \textbf{\partyBaddress}
+
+Effective Date: \textbf{\effectiveDate}
+
+\newpage
+
+\section{Purpose \& Services}
+\subsection{Referrals}
+\partyAshort{} agrees to refer potential clients ("Prospects") to \partyBshort{}.  
+If \partyBshort{} successfully sells services to referred Prospects, \partyAshort{} will receive a commission as outlined in Section~\ref{sec:commissions}.
+
+\subsection{Cooperation}
+Both parties agree to cooperate and assist during the sales process.  
+\partyBshort{} will provide all relevant materials to \partyAshort{} for services they promote.
+
+% ---------------------------------------------------------
+\section{Commissions}
+\label{sec:commissions}
+
+\subsection{Referral Commission}
+\partyBshort{} agrees to pay \partyAshort{} a commission of \commissionRate{} of total distribution or service fees received from services rendered (e.g., trucking, storage, special services) to clients referred by \partyAshort{}.
+
+\subsection{Payment Schedule}
+Commissions will be disbursed on a \paymentSchedule{} basis, contingent upon receipt of payment from referred clients.
+
+\subsection{Special Production Commission}
+If \partyAshort{} secures production-related referrals or new program opportunities, an additional commission may be negotiated based on mutual agreement and program profitability.
+
+% ---------------------------------------------------------
+\section{Ongoing Client Engagement and Support}
+\partyAshort{} will continue, as required, to engage and support clients after onboarding. This may include:
+\begin{itemize}
+  \item Regular check-ins to ensure satisfaction with \partyBshort{}’s services.
+  \item Acting as a liaison between the client and \partyBshort{} to address issues or feedback.
+  \item Providing insights on client needs and potential areas for service improvement.
+  \item Assisting with additional support or maximizing client experience.
+  \item Attending review sessions if necessary.
+\end{itemize}
+
+% ---------------------------------------------------------
+\section{Independent Contractor Status}
+\begin{itemize}
+  \item Both parties are independent contractors.
+  \item Neither party is entitled to the other’s employee benefits.
+  \item Each party shall comply with applicable laws and pay their own taxes and benefits.
+\end{itemize}
+
+% ---------------------------------------------------------
+\section{Confidentiality}
+Both parties agree to keep confidential all information received from the other party in the course of this Agreement.
+
+% ---------------------------------------------------------
+\section{Termination}
+This Agreement remains in effect from the Effective Date until terminated by either party with \textbf{\terminationNoticeDays{} days} written notice.  
+Any commissions earned prior to termination will remain payable under the original terms.
+
+% ---------------------------------------------------------
+\section{Governing Law}
+This Agreement shall be governed by and construed under the laws of \textbf{\governingLaw}.
+
+% ---------------------------------------------------------
+\section{Signatures}
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|p{0.4\linewidth}|p{0.4\linewidth}|}
+\hline
+\textbf{\partyAshort} & \textbf{\partyBshort} \\
+\hline
+Name: \partyAcontact & Name: \partyBcontact \\
+Title: \partyAtitle & Title: \partyBtitle \\
+Signature: \underline{\hspace{3cm}} & Signature: \underline{\hspace{3cm}} \\
+Date: \sigDate & Date: \sigDate \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}
+
